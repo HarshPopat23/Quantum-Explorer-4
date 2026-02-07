@@ -154,7 +154,38 @@ function Home() {
         </Container>
       </section>
 
-      {/* 2. AI Assistant UI Section (From Figure) */}
+    
+
+      {/* 3. Features Grid Section */}
+      <section className={styles.featuresSection} id="features">
+        <Container>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>
+              Everything You Need To <span className={styles.highlight}>Excel</span>
+            </h2>
+            <p className={styles.sectionDesc}>
+              Our platform combines AI technology with comprehensive learning resources to create the ultimate educational experience.
+            </p>
+          </div>
+
+          <div className={styles.featureGrid}>
+            {features.map((f, idx) => (
+              <div key={idx} className={styles.card}>
+                <div className={styles.cardIcon}>{f.icon}</div>
+                <h3 className={styles.cardTitle}>{f.title}</h3>
+                <p className={styles.cardDesc}>{f.desc}</p>
+                <div className={styles.tagGroup}>
+                  {f.tags.map(tag => (
+                    <span key={tag} className={styles.tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      
       <section className={styles.aiTutorSection}>
         <Container>
           <div className={styles.aiTutorContainer}>
@@ -212,35 +243,6 @@ function Home() {
               </div>
               <button className={styles.aiTryBtn}>✨ Try AI Bot Free</button>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 3. Features Grid Section */}
-      <section className={styles.featuresSection} id="features">
-        <Container>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>
-              Everything You Need To <span className={styles.highlight}>Excel</span>
-            </h2>
-            <p className={styles.sectionDesc}>
-              Our platform combines AI technology with comprehensive learning resources to create the ultimate educational experience.
-            </p>
-          </div>
-
-          <div className={styles.featureGrid}>
-            {features.map((f, idx) => (
-              <div key={idx} className={styles.card}>
-                <div className={styles.cardIcon}>{f.icon}</div>
-                <h3 className={styles.cardTitle}>{f.title}</h3>
-                <p className={styles.cardDesc}>{f.desc}</p>
-                <div className={styles.tagGroup}>
-                  {f.tags.map(tag => (
-                    <span key={tag} className={styles.tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
           </div>
         </Container>
       </section>
