@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header {
+  background: #fff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2563eb;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.navCenter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 0 1 500px;
+}
+
+.searchContainer {
+  display: flex;
+  width: 100%;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 5px 12px;
+}
+
+.searchContainer input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  outline: none;
+}
+
+.searchBtn {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.uploadBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.aiBot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  padding: 8px 15px;
+  border-radius: 50px;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  font-weight: 600;
+}
+
+/* Upper Section */
+.uppercontent {
+  background: #fff;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: sticky;
+  top: 70px;
+  z-index: 999;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.uppercontent p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btns button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.active {
+  background: #2563eb !important;
+  color: white !important;
+  border-color: #2563eb !important;
+}
+
+/* Content */
+.content {
+  padding: 30px;
+  background: #f0f4f8;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.videoCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.thumbnail {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.videoInfo {
+  padding: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.authorImg {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.text h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.text p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navCenter {
+    display: none;
+  }
+}
+.pdfPlaceholder {
+    width: 100%;
+    height: 100%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.loginHint {
+    font-size: 0.85rem;
+    color: #64748b;
+    background: #f8fafc;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+}

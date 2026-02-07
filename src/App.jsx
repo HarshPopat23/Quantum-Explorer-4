@@ -31,6 +31,7 @@
 import { Outlet } from 'react-router-dom'
 import Container from './components/Container'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
   // later you can replace this with real auth state
@@ -45,6 +46,7 @@ function App() {
           <Outlet />
         </Container>
       </main>
+      <Footer />
     </div>
   )
 }

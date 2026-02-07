@@ -2,12 +2,11 @@ import { account } from "./config";
 import { ID } from "appwrite";
 
 export const authService = {
-
     createAccount: async (email, password, name) => {
         try {
             const userAccount = await account.create(ID.unique(), email, password, name);
             if (userAccount) {
-            
+                // Login the user immediately after signup
                 return await account.createEmailPasswordSession(email, password);
             }
             return userAccount;
@@ -16,7 +15,6 @@ export const authService = {
             throw error;
         }
     },
-
 
     login: async (email, password) => {
         try {
@@ -29,9 +27,11 @@ export const authService = {
 
     getCurrentUser: async () => {
         try {
-            return await account.get();
+            const user = await account.get();
+            if (user) return user;
         } catch (error) {
-            console.log("Appwrite service :: getCurrentUser :: No active session");
+            // No console log here to keep your terminal clean during "AuthLayout" checks
+            return null;
         }
         return null;
     },
