@@ -46,9 +46,9 @@ function Header({ userStatus }) {
   const navItems = [
     { name: 'Home', slug: "/", active: true },
     { name: 'Features', slug: "#features", active: true }, // Changed slug to ID
-    { name: 'Vision', slug: "/vision", active: true },
-    { name: 'Login', slug: "/login", active: !userStatus },
-    { name: 'Signup', slug: "/signup", active: !userStatus },
+    { name: 'Video Library', slug: "/videolibrary", active: true },
+    // { name: 'Login', slug: "/login", active: !userStatus },
+    // { name: 'Signup', slug: "/signup", active: !userStatus },
     { name: 'Dashboard', slug: "/dashboard", active: userStatus },
   ]
 

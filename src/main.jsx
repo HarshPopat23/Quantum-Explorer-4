@@ -6,16 +6,9 @@ import Home from './components/Body/Home.jsx'
 import AuthLayout from './components/AuthLayout' 
 
 // Import your real components
-import Login from './pages/Login/Login'
-import Signup from './pages/Signup/Signup'
-
-// Keep this as a dummy until we build the real Dashboard page
-const DummyDashboard = () => (
-  <div style={{padding: '40px', textAlign: 'center'}}>
-    <h1>Welcome to your EduSpark Dashboard!</h1>
-    <p>You have successfully logged in.</p>
-  </div>
-);
+// import Login from './pages/Login/Login'
+// import Signup from './pages/Signup/Signup'
+import VideoLibrary from './components/Video/Videolibrary' // Added real component
 
 const router = createBrowserRouter([
   {
@@ -29,27 +22,35 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: (
-          <AuthLayout authentication={true}>
-            <DummyDashboard />
+          <AuthLayout authentication={false}>
+            <VideoLibrary /> 
           </AuthLayout>
         ),
       },
       {
-        path: "/login",
+        path: "/videolibrary",
         element: (
           <AuthLayout authentication={false}>
-            <Login />
+            <VideoLibrary />
           </AuthLayout>
         ),
       },
-      {
-        path: "/signup",
-        element: (
-          <AuthLayout authentication={false}>
-            <Signup />
-          </AuthLayout>
-        ),
-      },
+      // {
+      //   path: "/login",
+      //   element: (
+      //     <AuthLayout authentication={false}>
+      //       <Login />
+      //     </AuthLayout>
+      //   ),
+      // },
+      // {
+      //   path: "/signup",
+      //   element: (
+      //     <AuthLayout authentication={false}>
+      //       <Signup />
+      //     </AuthLayout>
+      //   ),
+      // },
     ],
   },
 ]);
